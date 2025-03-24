@@ -1,0 +1,95 @@
+nav{
+  text-align: center;
+  font-family: "Afacad Flux", sans-serif;
+}
+
+nav a{
+  text-decoration: none;
+  color: chartreuse;
+}
+
+.montserrat{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+}
+
+.afacad-flux{
+  font-family: "Afacad Flux", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+.crimson-text-regular {
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.crimson-text-semibold {
+  font-family: "Crimson Text", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.crimson-text-bold {
+  font-family: "Crimson Text", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.crimson-text-regular-italic {
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.crimson-text-semibold-italic {
+  font-family: "Crimson Text", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.crimson-text-bold-italic {
+  font-family: "Crimson Text", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.ma-shan-zheng-regular {
+  font-family: "Ma Shan Zheng", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+  background-color: rgb(14, 13, 13);
+  color: chartreuse;
+}
+
+a{
+  text-decoration: none;
+}
+
+#searchInput{
+  font-family: "Afacad Flux", sans-serif;
+  color: chartreuse;
+  background-color: rgb(14, 13, 13);
+  border: 1px chartreuse;
+  width: 100%;
+  text-align: center;
+}
+
+.Hdr-Icon{
+  float: left;
+}
+
+.Hdr{
+  text-align: right;
+  font-family: "Afacad Flux", sans-serif;
+  color: chartreuse;
+}

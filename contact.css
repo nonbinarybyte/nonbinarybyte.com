@@ -1,0 +1,64 @@
+.Hdr-Icon{
+  float: left;
+}
+
+.Hdr{
+  text-align: right;
+  font-family: "Afacad Flux", sans-serif;
+  color: chartreuse;
+}
+
+.contact-img{
+  font-family: "Afacad Flux", sans-serif;
+  float: left;
+}
+
+.conatct{
+  font-family: "Montserrat", sans-serif;
+  text-align: center; 
+}
+
+.conatct h2{
+  padding-top: 10px;
+}
+
+.bi{
+  font-size: xx-large;
+}
+
+.bi a{
+  text-decoration: none;
+  border: none;
+}
+
+.bi-envelope{
+  color: red;
+}
+
+.bi-twitter{
+  color: orangered;
+}
+
+.bi-pinterest{
+  color: yellow;
+}
+
+.bi-instagram{
+  color: chartreuse;
+}
+
+.bi-github{
+  color: aquamarine;
+}
+
+.bi-youtube{
+  color: aqua;
+}
+
+.bi-reddit{
+  color: lightskyblue;
+}
+
+.bi-link-45deg{
+  color: purple;
+}
