@@ -113,26 +113,15 @@ function Blog() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  function Blog() {
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     const fetchPosts = async () => {
-      const url = 'https://full-text-rss.p.rapidapi.com/extract.php';
+      const url = 'https://full-text-rss.p.rapidapi.com/makefulltextfeed.php?url=https%3A%2F%2Fmedium.com%2F%40kennycoveneytech%2Ffeed&format=rss&max=7&summary=1&use_extracted_title=1&links=remove&xss=-1&lang=2&accept=auto&content=text';
       const options = {
-        method: 'POST',
+        method: 'GET',
         headers: {
           'x-rapidapi-key': process.env.REACT_APP_RAPIDAPI_KEY,
-          'x-rapidapi-host': 'full-text-rss.p.rapidapi.com',
-          'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: new URLSearchParams({
-          url: 'https://medium.com/@kennycoveneytech/feed',
-          lang: '1',
-          links: 'footnotes',
-          content: 'text'
-        })
+          'x-rapidapi-host': 'full-text-rss.p.rapidapi.com'
+        }
       };
 
       try {
@@ -150,7 +139,21 @@ function Blog() {
     fetchPosts();
   }, []);
 
-  if (loading) return <div className="text-center">Loading...</div>;
+  if (loading) return (
+    <div className="flex justify-center items-center space-x-2">
+      {[...Array(5)].map((_, index) => (
+        <motion.img
+          key={index}
+          src="/cupcake.png"
+          alt="Loading Cupcake"
+          className="w-10 h-10"
+          animate={{ y: [0, -15, 0], filter: "hue-rotate(0deg)" }}
+          transition={{ duration: 0.5, repeat: Infinity, delay: index * 0.2 }}
+        />
+      ))}
+      <p className="text-pink-500 font-bold">Loading...</p>
+    </div>
+  );
 
   return (
     <div className="p-8 max-w-3xl mx-auto space-y-6">
@@ -163,7 +166,6 @@ function Blog() {
       ))}
     </div>
   );
- }
 }
 
 
