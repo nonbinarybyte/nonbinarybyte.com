@@ -110,25 +110,61 @@ function Home() {
 
 function Blog() {
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  function Blog() {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts?_limit=5")
-      .then((res) => res.json())
-      .then((data) => setPosts(data));
+    const fetchPosts = async () => {
+      const url = 'https://full-text-rss.p.rapidapi.com/extract.php';
+      const options = {
+        method: 'POST',
+        headers: {
+          'x-rapidapi-key': process.env.REACT_APP_RAPIDAPI_KEY,
+          'x-rapidapi-host': 'full-text-rss.p.rapidapi.com',
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams({
+          url: 'https://medium.com/@kennycoveneytech/feed',
+          lang: '1',
+          links: 'footnotes',
+          content: 'text'
+        })
+      };
+
+      try {
+        const response = await fetch(url, options);
+        const result = await response.text();
+        console.log(result);
+        setPosts([{ title: "Fetched Blog Post", body: result }]);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPosts();
   }, []);
+
+  if (loading) return <div className="text-center">Loading...</div>;
 
   return (
     <div className="p-8 max-w-3xl mx-auto space-y-6">
       <h1 className="text-3xl font-[Great Vibes] text-center text-pink-500">My Blog</h1>
-      {posts.map((post) => (
-        <article key={post.id} className="p-4 bg-white rounded-lg shadow-md">
+      {posts.map((post, index) => (
+        <article key={index} className="p-4 bg-white rounded-lg shadow-md">
           <h2 className="text-2xl font-bold">{post.title}</h2>
           <p className="mt-2 text-gray-700">{post.body}</p>
         </article>
       ))}
     </div>
   );
+ }
 }
+
 
 function About() {
   return (
