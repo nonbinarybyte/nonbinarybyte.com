@@ -5,7 +5,6 @@ import { Navbar } from './components/ui/navbar';
 import { AppLayout } from './components/ui/applayout';
 import { Button } from './components/ui/button';
 import { Analytics } from "@vercel/analytics/react";
-import { useAnalytics } from '@vercel/analytics/react';
 import { motion } from 'framer-motion';
 import './App.css';
 
