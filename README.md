@@ -1,12 +1,23 @@
-# React + Vite
+# nonbinarybyte.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My reactJS + tailwindCSS + Vite website!
 
-Currently, two official plugins are available:
+## What is this strange place?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+this strange place, creative by `@nonbinarybyte`, is their blog, portfolio/resume, and fun website!
 
-## Expanding the ESLint configuration
+## Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ReactJS
+- NPM
+- TailwindCSS
+- Vite
+- Vercel
+- Namecheap
+- Git
+- Github
+- Bootstrap Icons
+
+*& More!!*
+
+# THANK YOU! <3
