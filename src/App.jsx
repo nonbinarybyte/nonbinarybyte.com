@@ -6,6 +6,7 @@ import { AppLayout } from './components/ui/applayout';
 import { Button } from './components/ui/button';
 import { Analytics } from "@vercel/analytics/react";
 import { motion } from 'framer-motion';
+import ProgressBar from 'react-animated-progress-bar';
 import './App.css';
 
 // Google Fonts Import
@@ -14,58 +15,31 @@ fontLink.href = "https://fonts.googleapis.com/css2?family=Great+Vibes&family=Ubu
 fontLink.rel = "stylesheet";
 document.head.appendChild(fontLink);
 
-function Preloader() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (!loading) return null;
-
+function SkillCard({ skill, logo, percentage }) { 
   return (
-    <motion.div
-      initial={{ opacity: 1 }}
-      animate={{ opacity: 0 }}
-      transition={{ duration: 1.5 }}
-      className="fixed inset-0 flex items-center justify-center bg-gradient-to-r from-pink-100 via-blue-100 to-yellow-100 z-50"
-    >
-      <div className="relative">
-        <div className="animate-fall">
-          {[...Array(10)].map((_, i) => (
-            <motion.img
-              key={i}
-              src="/cupcake.png"
-              alt="Cupcake"
-              className="w-12 h-12 absolute drop-shadow-2xl"
-              initial={{ y: -100, scale: 0.8 }}
-              animate={{ y: [0, -15, 0], scale: 1 }}
-              transition={{ duration: 1, repeat: Infinity, delay: i * 0.2 }}
-              style={{
-                left: `${Math.random() * 100}%`,
-                filter: "hue-rotate(45deg) saturate(200%) drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3))",
-                transform: "perspective(500px) rotateX(20deg)"
-              }}
-            />
-          ))}
-        </div>
+    <div className="w-full max-w-sm p-4 border-2 border-pink-200 rounded-2xl shadow-lg bg-gradient-to-br from-pink-100 via-blue-100 to-yellow-100 relative flex flex-col items-center md:w-72">
+      <div className="flex items-center justify-between w-full">
+        <span className="text-lg text-gray-800 font-[Great Vibes] md:text-xl">{skill}</span>
+        <img src={logo} alt={skill} className="w-8 h-8 md:w-10 md:h-10" />
       </div>
-    </motion.div>
-  );
-}
-
-function SkillCard({ skill, logo }) { 
-  return (
-    <div className="w-full max-w-sm p-4 border-2 border-pink-200 rounded-2xl shadow-lg bg-gradient-to-br from-pink-100 via-blue-100 to-yellow-100 relative flex justify-between items-center md:w-72">
-      <span className="text-lg text-gray-800 font-[Great Vibes] md:text-xl">{skill}</span>
-      <img src={logo} alt={skill} className="w-8 h-8 md:w-10 md:h-10" />
+      <ProgressBar
+        width="100%"
+        height="10px"
+        rect="true"
+        fontColor="#000"
+        percentage={percentage}
+        rectPadding="1px"
+        rectBorderRadius="20px"
+        trackPathColor="rgba(255,255,255,0.5)"
+        bgColor="#a7f3d0" // pastel pink (Tailwind pink-300)
+        trackBorderColor="#f9a8d4"// pastel pink border
+      />
       <motion.img
         src="/cupcake.png"
         alt="Cupcake"
-        className="w-6 h-6 absolute bottom-1 right-1 drop-shadow-xl md:w-8 md:h-8"
-        animate={{ rotate: [0, 10, -10, 0] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        className="w-6 h-6 absolute bottom-1 right-1 drop-shadow-xl"
+        animate={{ rotate: [0, 15, -15, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
       />
     </div>
   );
@@ -76,17 +50,15 @@ function Portfolio() {
   return (
     <div className="p-8 space-y-4 flex flex-wrap gap-4 justify-center">
       <h1 className="text-3xl font-bold text-pink-500 font-[Great Vibes] w-full text-center">My Skills</h1>
-      <SkillCard skill="Git" logo="/github.svg" />
-      <SkillCard skill="Terminal (Linux)" logo="/terminal-fill.svg" />
-      <SkillCard skill="JavaScript" logo="/javascript.svg" />
-      <SkillCard skill="Stripe API/Integration" logo="/stripe.svg" />
-        <br />
-      <SkillCard skill="HTML" logo="/html5.svg" />
-      <SkillCard skill="React" logo="react.svg" />
-      <SkillCard skill="Markdown" logo="markdown.svg" />
-      <SkillCard skill="CSS" logo="css3.svg" />
-        <br />
-      <SkillCard skill="Node.js & NPM" logo="/nodejs-alt.svg" />
+      <SkillCard skill="Git" logo="/github.svg" percentage="35" />
+      <SkillCard skill="Terminal (Linux)" logo="/terminal-fill.svg" percentage="15" />
+      <SkillCard skill="JavaScript" logo="/javascript.svg" percentage="10" />
+      <SkillCard skill="Stripe API/Integration" logo="/stripe.svg" percentage="35" />
+      <SkillCard skill="HTML" logo="/html5.svg" percentage="100" />
+      <SkillCard skill="React" logo="react.svg" percentage="1" />
+      <SkillCard skill="Markdown" logo="markdown.svg" percentage="100" />
+      <SkillCard skill="CSS" logo="css3.svg" percentage="99" />
+      <SkillCard skill="Node.js & NPM" logo="/nodejs-alt.svg" percentage="10" />
     </div>
   );
 }
@@ -198,7 +170,6 @@ function About() {
 function App() {
   return (
     <Router>
-      <Preloader />
       <div className="min-h-screen bg-gradient-to-br from-pink-100 via-blue-100 to-yellow-100 transition-opacity duration-700">
           <AppLayout>
             <Routes>
