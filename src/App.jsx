@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { Card, CardContent } from './components/ui/card';
-import Extras from './Extras';
+import Extras from './extras';
 import { Navbar } from './components/ui/navbar';
 import { AppLayout } from './components/ui/applayout';
 import { Button } from './components/ui/button';
