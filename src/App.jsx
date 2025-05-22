@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { Card, CardContent } from './components/ui/card';
+import Extras from './Extras';
 import { Navbar } from './components/ui/navbar';
 import { AppLayout } from './components/ui/applayout';
 import { Button } from './components/ui/button';
@@ -76,6 +77,9 @@ function Home() {
       </Link>
       <Link to="/about">
         <Button className="mt-4 ml-2 bg-yellow-200 text-gray-800 hover:bg-yellow-300">About Me</Button>
+      </Link>
+      <Link to="/extras">
+        <Button className="mt-4 ml-2 bg-green-200 text-gray-800 hover:bg-green-300">Extras</Button>
       </Link>
     </div>
   );
@@ -177,6 +181,7 @@ function App() {
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/about" element={<About />} />
+              <Route path="/extras" element={<Extras />} />
             </Routes>
           </AppLayout>
         <footer className="p-4 text-center text-gray-800 font-[Raleway]">
