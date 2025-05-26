@@ -77,10 +77,112 @@ function Home() {
       <Link to="/about">
         <Button className="mt-4 ml-2 bg-yellow-200 text-gray-800 hover:bg-yellow-300">About Me</Button>
       </Link>
+      <Link to="/extras">
+        <Button className="mt-4 ml-2 bg-green-200 text-gray-800 hover:bg-green-300">Extras</Button>
+      </Link>
     </div>
   );
 }
 
+<<<<<<< HEAD
+=======
+function Blog() {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const url = 'https://full-text-rss.p.rapidapi.com/makefulltextfeed.php?url=https%3A%2F%2Fmedium.com%2F%40kennycoveneytech%2Ffeed&format=rss&max=7&summary=1&use_extracted_title=1&links=remove&xss=-1&lang=2&accept=auto&content=text';
+      const options = {
+        method: 'GET',
+        headers: {
+          'x-rapidapi-key': process.env.REACT_APP_RAPIDAPI_KEY,
+          'x-rapidapi-host': 'full-text-rss.p.rapidapi.com'
+        }
+      };
+
+      try {
+        const response = await fetch(url, options);
+        const result = await response.text();
+        console.log(result);
+        setPosts([{ title: "Fetched Blog Post", body: result }]);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, []);
+
+  if (loading) return (
+    <div className="flex justify-center items-center space-x-2">
+      {[...Array(5)].map((_, index) => (
+        <motion.img
+          key={index}
+          src="/cupcake.png"
+          alt="Loading Cupcake"
+          className="w-10 h-10"
+          animate={{ y: [0, -15, 0], filter: "hue-rotate(0deg)" }}
+          transition={{ duration: 0.5, repeat: Infinity, delay: index * 0.2 }}
+        />
+      ))}
+      <p className="text-pink-500 font-bold">Loading...</p>
+    </div>
+  );
+
+  return (
+    <div className="p-8 max-w-3xl mx-auto space-y-6">
+      <h1 className="text-3xl font-[Great Vibes] text-center text-pink-500">My Blog</h1>
+      {posts.map((post, index) => (
+        <article key={index} className="p-4 bg-white rounded-lg shadow-md">
+          <h2 className="text-2xl font-bold">{post.title}</h2>
+          <p className="mt-2 text-gray-700">{post.body}</p>
+        </article>
+      ))}
+    </div>
+  );
+}
+
+function Extras() {
+  return (
+    <div className="min-h-screen p-6 bg-gradient-to-br from-pink-100 via-blue-100 to-yellow-100 text-gray-800 font-[Raleway]">
+      <div className="max-w-5xl mx-auto relative">
+        {/* Floating Cupcake Animation */}
+        <motion.img
+          src="/cupcake.png"
+          alt="Floating Cupcake"
+          className="w-10 h-10 absolute top-4 right-4 drop-shadow-xl"
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        />
+
+        <h1 className="text-4xl font-[Great Vibes] text-pink-500 text-center mb-6">Extras</h1>
+
+        <p className="text-center text-gray-700 font-[Ubuntu] mb-8">
+          Here's a special presentation I've put together. Enjoy!
+        </p>
+
+        <div className="relative w-full overflow-hidden rounded-2xl shadow-xl aspect-video">
+          <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSyUSiQ0UwrDzs40KjSZnlv3in7we1-sC3ahfAVQ3abkZ9bcRzbRP81NMrbRQQu5g2moD6eFBCZ7KqY/pubembed?start=true&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" className="absolute top-0 left-0 w-full h-full"></iframe>
+        </div>
+
+        <div className="text-center mt-8">
+          <a
+            href="https://docs.google.com/presentation/d/1ZcSsrGSNJYggURZir_0en66xC4lSYHeBvjlX7Kzi6kE/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-pink-200 text-gray-800 hover:bg-pink-300 px-6 py-2 rounded-xl shadow-md transition"
+          >
+            View on Google Slides
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> c47cce7db0eb32e0959775fb6250ed39d8f70303
 
 function About() {
   return (
@@ -117,6 +219,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/about" element={<About />} />
+              <Route path="/extras" element={<Extras />} />
             </Routes>
           </AppLayout>
         <footer className="p-4 text-center text-gray-800 font-[Raleway]">
