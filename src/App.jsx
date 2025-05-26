@@ -71,71 +71,12 @@ function Home() {
       <Link to="/portfolio">
         <Button className="mt-4 bg-pink-200 text-gray-800 hover:bg-pink-300">View Portfolio</Button>
       </Link>
-      <Link to="/blog">
-        <Button className="mt-4 ml-2 bg-blue-200 text-gray-800 hover:bg-blue-300">Read Blog</Button>
+      <Link to="https://forum.nonbinarybyte.com/">
+        <Button className="mt-4 ml-2 bg-blue-200 text-gray-800 hover:bg-blue-300">Go Checkout the Forum</Button>
       </Link>
       <Link to="/about">
         <Button className="mt-4 ml-2 bg-yellow-200 text-gray-800 hover:bg-yellow-300">About Me</Button>
       </Link>
-    </div>
-  );
-}
-
-function Blog() {
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const url = 'https://full-text-rss.p.rapidapi.com/makefulltextfeed.php?url=https%3A%2F%2Fmedium.com%2F%40kennycoveneytech%2Ffeed&format=rss&max=7&summary=1&use_extracted_title=1&links=remove&xss=-1&lang=2&accept=auto&content=text';
-      const options = {
-        method: 'GET',
-        headers: {
-          'x-rapidapi-key': process.env.REACT_APP_RAPIDAPI_KEY,
-          'x-rapidapi-host': 'full-text-rss.p.rapidapi.com'
-        }
-      };
-
-      try {
-        const response = await fetch(url, options);
-        const result = await response.text();
-        console.log(result);
-        setPosts([{ title: "Fetched Blog Post", body: result }]);
-      } catch (error) {
-        console.error(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchPosts();
-  }, []);
-
-  if (loading) return (
-    <div className="flex justify-center items-center space-x-2">
-      {[...Array(5)].map((_, index) => (
-        <motion.img
-          key={index}
-          src="/cupcake.png"
-          alt="Loading Cupcake"
-          className="w-10 h-10"
-          animate={{ y: [0, -15, 0], filter: "hue-rotate(0deg)" }}
-          transition={{ duration: 0.5, repeat: Infinity, delay: index * 0.2 }}
-        />
-      ))}
-      <p className="text-pink-500 font-bold">Loading...</p>
-    </div>
-  );
-
-  return (
-    <div className="p-8 max-w-3xl mx-auto space-y-6">
-      <h1 className="text-3xl font-[Great Vibes] text-center text-pink-500">My Blog</h1>
-      {posts.map((post, index) => (
-        <article key={index} className="p-4 bg-white rounded-lg shadow-md">
-          <h2 className="text-2xl font-bold">{post.title}</h2>
-          <p className="mt-2 text-gray-700">{post.body}</p>
-        </article>
-      ))}
     </div>
   );
 }
@@ -175,7 +116,6 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/blog" element={<Blog />} />
               <Route path="/about" element={<About />} />
             </Routes>
           </AppLayout>
