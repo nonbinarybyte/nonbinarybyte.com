@@ -24,3 +24,4 @@ function Portfolio() {
     const sections = data.getSections()
 
     const animatedBackgroundEnabled = settings.templateSettings.animatedBackground
+}
