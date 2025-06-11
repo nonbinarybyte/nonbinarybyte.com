@@ -1,0 +1,206 @@
+{
+    "title": {
+        "locales": {
+            "en": {
+                "title_short": "Skills",
+                "title_short_nav": "Skills",
+                "title_long_prefix": "Explore",
+                "title_long": "My {{Skill Set}}"
+            }
+        }
+    },
+
+    "articles": [
+        {
+            "id": 1,
+            "component": "ArticleCards",
+            "locales": {},
+            "settings": {
+                "order_items_by": "id",
+                "order_items_sort": "asc"
+            },
+            "items": [
+                {
+                    "id": 1,
+                    "img": "",
+                    "faIcon": "fa-solid fa-table-columns",
+                    "faIconColors": {"bg": "", "fill": ""},
+                    "date": {"year": null, "month": null},
+                    "link": {"href": "", "tooltipString": ""},
+                    "locales": {
+                        "en": {
+                            "title": "{{Website}} creation",
+                            "text": "I can bring your best ideas into life and make them a reality!"
+                        }
+                    }
+                }
+            ]
+        },
+
+        {
+            "id": 2,
+            "component": "ArticleSkills",
+            "locales": {
+                "en": {"title": "Backend Stack"}
+            },
+            "settings": {
+                "max_items_per_row": 3,
+                "max_rows_collapse_threshold": 6,
+                "order_items_by": "percentage",
+                "order_items_sort": "desc",
+                "round_icons": false
+            },
+            "items": [
+                {
+                    "id": 1,
+                    "img": "",
+                    "faIcon": "fa-brands fa-node-js",
+                    "faIconColors": {"bg": "", "fill": "#339933"},
+                    "date": {"year": 2024, "month": 12},
+                    "percentage": 95,
+                    "locales": {
+                        "en": {
+                            "title": "Node.js"
+                        }
+                    }
+                },
+                {
+                    "id": 4,
+                    "img": "",
+                    "faIcon": "fa-solid fa-database",
+                    "faIconColors": {"bg": "", "fill": "#4479A1"},
+                    "date": {"year": 2025},
+                    "percentage": 90,
+                    "locales": {
+                        "en": {
+                            "title": "MySQL"
+                        }
+                    }
+                },
+                {
+                    "id": 6,
+                    "img": "",
+                    "faIcon": "fa-brands fa-php",
+                    "faIconColors": {"bg": "", "fill": "#FFD700", "fillLight": "#4F5B93"},
+                    "date": {"year": 2025},
+                    "percentage": 2,
+                    "locales": {
+                        "en": {
+                            "title": "PHP 8.0+"
+                        }
+                    }
+                },
+                {
+                    "id": 7,
+                    "img": "",
+                    "faIcon": "fa-brands fa-python",
+                    "faIconColors": {"bg": "", "fill": "#306998"},
+                    "date": {"year": 2024},
+                    "percentage": 5,
+                    "locales": {
+                        "en": {
+                            "title": "Python"
+                        }
+                    }
+                },
+                {
+                    "id": 10,
+                    "img": "",
+                    "faIcon": "fa-brands fa-git",
+                    "faIconColors": {"bg": "", "fill": "#F05032"},
+                    "date": {"year": 2024, "month": 1},
+                    "percentage": 35,
+                    "locales": {
+                        "en": {
+                            "title": "Git"
+                        }
+                    }
+                }
+            ]
+        },
+
+        {
+            "id": 3,
+            "component": "ArticleSkills",
+            "locales": {
+                "en": {"title": "Frontend Stack"}
+            },
+            "settings": {
+                "max_items_per_row": 3,
+                "max_rows_collapse_threshold": 6,
+                "order_items_by": "percentage",
+                "order_items_sort": "desc",
+                "round_icons": false
+            },
+            "items": [
+                {
+                    "id": 1,
+                    "img": "",
+                    "faIcon": "fa-brands fa-html5",
+                    "faIconColors": {"bg": "", "fill": "#E34F26"},
+                    "date": {"year": 2020, "month": 5},
+                    "percentage": 100,
+                    "locales": {
+                        "en": {
+                            "title": "HTML 5"
+                        }
+                    }
+                },
+                {
+                    "id": 2,
+                    "img": "",
+                    "faIcon": "fa-brands fa-css3-alt",
+                    "faIconColors": {"bg": "", "fill": "#1572B6"},
+                    "date": {"year": 2019, "month": 1},
+                    "percentage": 65,
+                    "locales": {
+                        "en": {
+                            "title": "CSS 3"
+                        }
+                    }
+                },
+                {
+                    "id": 3,
+                    "img": "",
+                    "faIcon": "fa-brands fa-js",
+                    "faIconColors": {"bg": "", "fill": "#F7DF1E", "fillLight": "#a69617"},
+                    "date": {"year": 2020, "month": 3},
+                    "percentage": 100,
+                    "locales": {
+                        "en": {
+                            "title": "JavaScript ES6+"
+                        }
+                    }
+                },
+                {
+                    "id": 4,
+                    "img": "",
+                    "faIcon": "fa-brands fa-react",
+                    "faIconColors": {"bg": "", "fill": "#61DAFB", "fillLight": "#317385"},
+                    "date": {"year": 2025, "month": 4},
+                    "percentage": 10,
+                    "locales": {
+                        "en": {
+                            "title": "React"
+                        }
+                    }
+                },
+                {
+                    "id": 4,
+                    "img": "images/flags/zh.png",
+                    "faIcon": "",
+                    "faIconColors": {"bg": "", "fill": ""},
+                    "date": {"year": null, "month": null},
+                    "percentage": null,
+                    "locales": {
+                        "en": {
+                            "title": "Chinese (simplified)",
+                            "text": "Basic understanding of Chinese; learning and improving.",
+                            "level": "Basic"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

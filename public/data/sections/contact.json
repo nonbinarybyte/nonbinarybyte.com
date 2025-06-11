@@ -1,0 +1,55 @@
+{
+    "title": {
+        "locales": {
+            "en": {
+                "title_short": "Contact",
+                "title_short_nav": "Contact",
+                "title_long_prefix": "Don't hesitate to",
+                "title_long": "{{Contact}} Me"
+            }
+        }
+    },
+
+    "articles": [
+        {
+            "id": 2,
+            "component": "ArticleInfoList",
+            "settings": {
+                "order_items_by": "id",
+                "order_items_sort": "asc"
+            },
+            "items": [
+                {
+                    "id":2,
+                    "faIcon": "fa-solid fa-envelope",
+                    "faIconColors": { "bg": "", "fill": "" },
+                    "label": "kthomas@nonbinarybyte.com",
+                    "link": {"href": "mailto:kthomas@nonbinarybyte.com", "tooltipString": "email_me"},
+                    "locales": {
+                        "en": {"title": "E-mail"}
+                    }
+                },
+                {
+                    "id": 5,
+                    "faIcon": "fa-brands fa-instagram",
+                    "faIconColors": { "bg": "", "fill": "" },
+                    "label": "@nonbinarybyte",
+                    "link": {"href": "https://instagram.com/nonbinarybyte", "tooltipString": "open_website"},
+                    "locales": {
+                        "en": {"title": "Instagram"}
+                    }
+                },
+                {
+                    "id": 6,
+                    "faIcon": "fa-brands fa-tiktok",
+                    "faIconColors": { "bg": "", "fill": "" },
+                    "label": "@nonbinarybyte",
+                    "link": {"href": "https://tiktok.com/@nonbinarybyte", "tooltipString": "open_website"},
+                    "locales": {
+                        "en": { "title": "TikTok" }
+                    }
+                }
+            ]
+        }
+    ]
+}

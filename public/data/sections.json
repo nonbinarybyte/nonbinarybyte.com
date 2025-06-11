@@ -1,0 +1,34 @@
+{
+    "sections": [
+        {
+            "id": "about",
+            "categoryId": "home",
+            "jsonPath": "/data/sections/cover.json",
+            "faIcon": "fa-solid fa-address-card"
+        },
+        {
+            "id": "skills",
+            "categoryId": "showcase",
+            "jsonPath": "/data/sections/skills.json",
+            "faIcon": "fa-solid fa-tools"
+        },
+        {
+            "id": "portfolio",
+            "categoryId": "showcase",
+            "jsonPath": "/data/sections/portfolio.json",
+            "faIcon": "fa-solid fa-folder-open"
+        },
+        {
+            "id": "achievements",
+            "categoryId": "showcase",
+            "jsonPath": "/data/sections/achievements.json",
+            "faIcon": "fa-solid fa-award"
+        },
+        {
+            "id": "contact",
+            "categoryId": "more",
+            "jsonPath": "/data/sections/contact.json",
+            "faIcon": "fa-solid fa-pen-to-square"
+        }
+    ]
+}
