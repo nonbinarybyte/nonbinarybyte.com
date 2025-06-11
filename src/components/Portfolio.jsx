@@ -26,4 +26,4 @@ function Portfolio() {
     const animatedBackgroundEnabled = settings.templateSettings.animatedBackground
 }
 
-export Portfolio()
+export default Portfolio()
