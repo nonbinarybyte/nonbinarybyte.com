@@ -1,0 +1,24 @@
+{
+    "name": "Kenny Thomas-Moore",
+
+    "profilePictureUrl": "https://avatars.githubusercontent.com/u/184435682?v=4",
+    "resumePdfUrl": "",
+
+    "statusCircleVisible": true,
+    "statusCircleVariant": "available",
+    "statusCircleHoverMessage": "status_message_available_for_freelance",
+
+    "locales": {
+        "en": {
+            "localized_name": "Kenny Thomas-Moore",
+            "status_message_available_for_freelance": "Available for freelance!",
+            "roles": [
+                "Fullstack Developer",
+                "OS Developer",
+                "Translator",
+                "Accesibility Specialist",
+                "Content Creator"
+            ]
+        }
+    }
+}

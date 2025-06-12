@@ -1,0 +1,75 @@
+{
+    "title": {
+        "locales": {
+            "en": {
+                "title_short": "Portfolio",
+                "title_short_nav": "Portfolio",
+                "title_long_prefix": "Take a look at",
+                "title_long": "My {{Portfolio}}"
+            }
+        }
+    },
+
+    "articles": [
+        {
+            "id": 1,
+            "component": "ArticlePortfolio",
+            "locales": {
+                "en": {
+                    "category_all": "All"
+                }
+            },
+            "settings": {
+                "order_items_by": "id",
+                "order_items_sort": "asc"
+            },
+            "items": [
+                {
+                    "id": 1,
+                    "preview": {
+                        "links": [
+                            {"href": "https://github.com/nonbinarybyte/DevDaisy", "tooltipString": "see_on_github", "faIcon": "fa-brands fa-github"}
+                        ]
+                    },
+                    "locales": {
+                        "en": {
+                            "title": "Dev Daisy",
+                            "text": "A semi-functional desktop app made with <b>C Language</b>, Made for lightweight developing with lots of language supported!",
+                            "tags": ["C", "App"]
+                        }
+                    }
+                },
+                {
+                    "id": 2,
+                    "preview": {
+                        "links": [
+                            {"href": "https://github.com/nonbinarybyte/CelestiaOS", "tooltipString": "see_on_github", "faIcon": "fa-brands fa-github"}
+                        ]
+                    },
+                    "locales": {
+                        "en": {
+                            "title": "Celestia OS",
+                            "text": "A <b>Work In Progress</b> Operating system! Not made to be used as a host, just for fun.",
+                            "tags": ["C", "Operating System", "OS", "Syatems Development"]
+                        }
+                    }
+                },
+                {
+                    "id": 3,
+                    "preview": {
+                        "links": [
+                            {"href": "https://github.com/nonbinarybyte/knitlang", "tooltipString": "see_on_github", "faIcon": "fa-brands fa-github"}
+                        ]
+                    },
+                    "locales": {
+                        "en": {
+                            "title": "knitlang",
+                            "text": "A <b>Work In Progress</b> Programming Language, based off of knitting. Just for fun yet again.",
+                            "tags": ["Rust", "Other Development"]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
