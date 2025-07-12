@@ -1,0 +1,88 @@
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+}
+
+.libertinus-math-regular {
+    font-family: "Libertinus Math", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --tangelo: #f6511dff;
+    --selective-yellow: #ffb400ff;
+    --picton-blue: #00a6edff;
+    --apple-green: #7fb800ff;
+    --berkeley-blue: #0d2c54ff;
+    --bright-pink-crayola: #ef476fff;
+    --moonstone: #7fb7beff;
+    --eggplant: #472836ff;
+}
+
+body {
+    background-color: bisque;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+}
+
+a {
+    color: var(--bright-pink-crayola);
+    text-decoration: none;
+    font-family: "Libertinus Math", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1, h2, h3 {
+    font-family: "Libertinus Math", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--berkeley-blue)
+}
+
+h4, h5, h6 {
+    font-family: "Libertinus Math", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--moonstone)
+}
+
+footer {
+    text-align: center;
+}
+
+header {
+    text-align: center;
+}
+
+button {
+    background-color: var(--apple-green);
+    width: fit-content;
+    height: 25%;
+    border: none;
+}
+
+.picture-hdr-col {
+    display: flexbox;
+    float: left;
+}
+
+.title-hdr-col {
+    float: left;
+}
+
+.txt-hdr-col {
+    float: left;
+}
+
+.skills {
+    text-align: center;
+}
